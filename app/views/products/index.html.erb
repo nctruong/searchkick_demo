@@ -4,7 +4,7 @@
 </div>
 <% if @search && !@products.suggestions.empty? %>
   <div>
-    <b>Did you mean: </b><%= @products.suggestions.join(', ') %>
+    <b>Did you mean: </b><%= link_to @products.suggestions.join(', '), "/search?q=#{@products.suggestions.join(', ').strip}" %>
   </div>  
   <br>
   <br>
